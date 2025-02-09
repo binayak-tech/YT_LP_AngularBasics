@@ -1,1 +1,8 @@
-<p>data-binding works!</p>
+<h2>{{title}}:</h2>
+<p>In the above heading is written using data binding</p>
+<button class="btnToggleUserDetails" (click)="onToggleBtnClicked()">{{btnText}}</button>
+<div [class] = "classUserDetails" *ngFor = "let user of users">
+    <p>My name is {{user.name}}.</p>
+    <p>I am {{user.age}} years old.</p>
+    <p>I work as a {{user.role}} at {{user.organization}}.</p>
+</div>
